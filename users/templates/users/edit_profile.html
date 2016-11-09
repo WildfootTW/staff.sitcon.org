@@ -2,7 +2,7 @@
 {% block title %}資料填寫 ‧ {{ u.profile.name }}{{ block.super }}{% endblock %}
 {% block content %}
 {% if status %}
-<div class="radius {% if status == 'success' %}secondary{% else %}alert{% endif %} alert-box" data-alert>
+<div class="radius {% if status == 'success' %}success{% else %}alert{% endif %} alert-box" data-alert>
 	{% if status == 'success' %}{% if user == u %}你的{% endif %}個人檔案已經儲存。
 	{% else %}儲存個人檔案時發生錯誤，請修正下列欄位。{% endif %}
 	<a href="#" class="close">&times;</a>
@@ -84,8 +84,8 @@
 					<input type="text" name="personal_id" maxlength="10" placeholder="身份證字號" value="{{ u.profile.personal_id }}" />
 				</div>
 				<div class="small-5 columns">
-					<label><input type="radio" name="twenty" value="True"{% if u.profile.twenty %} checked{% endif %}>我在 1996 年 2 月 27 號（含）前出生</input></label>
-					<label><input type="radio" name="twenty" value="False"{% if not u.profile.twenty %} checked{% endif %}>我在 1996 年 2 月 27 號後出生，<br>且已經獲得家長同意參加 SITCON</input></label>
+					<label><input type="radio" name="twenty" value="True"{% if u.profile.twenty %} checked{% endif %}>我在 {{ event_date.year - 20 }} 年 {{ event_date.month }} 月 {{ event_date.day }} 號（含）前出生</input></label>
+					<label><input type="radio" name="twenty" value="False"{% if not u.profile.twenty %} checked{% endif %}>我在 {{ event_date.year - 20 }} 年 {{ event_date.month }} 月 {{ event_date.day }} 號後出生，<br>且已經獲得家長同意參加 SITCON</input></label>
 				</div>
 			</div>
 			<div class="row">
