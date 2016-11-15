@@ -51,6 +51,9 @@ Load database schema and initial data
 	python manage.py migrate
 	python manage.py loaddata */fixtures/*.json
 
+_Note: currently there are problems with error message : Invalid template library specified. ImportError raised when trying to load 'core.templatetags.markdown': No module named 'html5lib.sanitizer'
+try to command : pip install html5lib==0.9999999_
+
 _Note: currently there are problems with loaddata on `master` branch, see commit 5d8436149cf22f0_
 
 Production Deployment
