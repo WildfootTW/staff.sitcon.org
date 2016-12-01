@@ -22,19 +22,19 @@
 			</div>
 			<div class="row">
 				<div class="small-12 columns {% if 'username' in errors %}error{% endif %}">
-					<input type="text" name="username" id="username" maxlength="30" placeholder="帳號" required />
+                    <input type="text" name="username" id="username" value="{{ form_feedback.username }}"maxlength="30" placeholder="帳號" required />
 					{% if 'invalid_username' in errors %}<small>無效的帳號名稱。</small>
 					{% elif 'username_already_taken' in errors %}<small>帳號名稱已被使用。</small>{% endif %}
 				</div>
 			</div>
 			<div class="row">
 				<div class="small-12 columns">
-					<input type="text" name="display_name" maxlength="16" placeholder="顯示名稱" required />
+					<input type="text" name="display_name" value="{{ form_feedback.display_name }}"maxlength="16" placeholder="顯示名稱" required />
 				</div>
 			</div>
 			<div class="row">
 				<div class="small-8 columns">
-					<input type="text" name="title" maxlength="16" placeholder="職稱" required />
+					<input type="text" name="title" value="{{ form_feedback.title }}"maxlength="16" placeholder="職稱" required />
 				</div>
 				<div class="small-4 columns">
 					<label class="inline"><a href="#" id="groups_label" class="has-tip" title="設定權限" data-tooltip data-dropdown="groups_dropdown" data-default-content="選取組別">選取組別</a></label>
@@ -50,7 +50,7 @@
 			</div>
 			<div class="row">
 				<div class="small-12 columns {% if 'email' in errors %}error{% endif %}">
-					<input type="text" name="email" placeholder="電子郵件信箱" required />
+					<input type="text" name="email" value="{{ form_feedback.email }}" placeholder="電子郵件信箱" required />
 					{% if 'invalid_email' in errors %}<small>無效的電子郵件地址。</small>
 					{% elif 'email_already_taken' in errors %}<small>電子郵件信箱已被使用。</small>{% endif %}
 				</div>
@@ -62,28 +62,28 @@
 			</div>
 			<div class="row">
 				<div class="small-6 columns">
-					<input type="text" name="last_name" maxlength="30" placeholder="姓" required />
+					<input type="text" name="last_name" value="{{ form_feedback.last_name }}"maxlength="30" placeholder="姓" required />
 				</div>
 				<div class="small-6 columns">
-					<input type="text" name="first_name" maxlength="30" placeholder="名" required />
+					<input type="text" name="first_name" value="{{ form_feedback.first_name }}"maxlength="30" placeholder="名" required />
 				</div>
 			</div>
 			<div class="row">
 				<div class="small-6 columns">
-					<input type="text" name="school" maxlength="30" placeholder="學校" required />
+					<input type="text" name="school" value="{{ form_feedback.school }}"maxlength="30" placeholder="學校" required />
 				</div>
 				<div class="small-6 columns">
-					<input type="text" name="grade" maxlength="30" placeholder="系所" required />
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-12 columns">
-					<input type="text" name="phone" placeholder="電話號碼" />
+					<input type="text" name="grade" value="{{ form_feedback.grade }}"maxlength="30" placeholder="系所" required />
 				</div>
 			</div>
 			<div class="row">
 				<div class="small-12 columns">
-					<textarea name="comment" placeholder="備註"></textarea>
+					<input type="text" name="phone" value="{{ form_feedback.phone }}"placeholder="電話號碼" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<textarea name="comment" placeholder="備註">{{ form_feedback.comment }}</textarea>
 				</div>
 			</div>
 			<div class="row field-header">

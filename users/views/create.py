@@ -14,9 +14,22 @@ from users.models import UserProfile
 def create(request):
     errors = []
     status = ''
+    form_feedback = {}
 
     if 'submit' in request.POST:
         user = User()
+
+        form_feedback['username'] = request.POST.get('username')
+        form_feedback['email'] = request.POST.get('email')
+        form_feedback['first_name'] = request.POST.get('first_name')
+        form_feedback['last_name'] = request.POST.get('last_name')
+        form_feedback['title'] = request.POST.get('title')
+        form_feedback['display_name'] = request.POST.get('display_name')
+        form_feedback['school'] = request.POST.get('school')
+        form_feedback['bio'] = request.POST.get('bio')
+        form_feedback['grade'] = request.POST.get('grade')
+        form_feedback['phone'] = request.POST.get('phone')
+        form_feedback['comment'] = request.POST.get('comment')
 
         username = request.POST.get('username')
         if username:
@@ -86,4 +99,5 @@ def create(request):
         'categories': sorted_categories(),
         'errors': errors,
         'status': status,
+        'form_feedback': form_feedback,
     })
