@@ -14,10 +14,9 @@ from users.models import UserProfile
 def create(request):
     errors = []
     status = ''
+    user = User()
 
     if 'submit' in request.POST:
-        user = User()
-
         username = request.POST.get('username')
         if username:
             if User.objects.filter(username=username).count() < 1:
@@ -86,4 +85,5 @@ def create(request):
         'categories': sorted_categories(),
         'errors': errors,
         'status': status,
+        'user': user,
     })
