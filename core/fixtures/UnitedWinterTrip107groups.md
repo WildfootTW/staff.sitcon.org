@@ -26,3 +26,109 @@
 \u6D3B\u52D5\u7D44
 
 http://www.online-toolz.com/tools/text-unicode-entities-convertor.php
+[
+{
+    "fields": {
+        "name": "\u884c\u653f\u7d44", /*行政組*/
+        "permissions": [
+            31, /*users | user profile | View profile detail*/
+            48, /*docs | blob text | Can add blob text*/
+            60 /*issues | issue | Can add issue*/
+        ]
+    },
+    "model": "auth.group",
+    "pk": 3
+},
+{
+    "fields": {
+        "name": "\u5de5\u4f5c\u4eba\u54e1", /*工作人員*/
+        "permissions": [
+            38, /*docs | file | Can add file*/
+            39, /*docs | file | Can change file*/
+            40, /*docs | file | Can delete file*/
+            28, /*users | user profile | Can add user profile*/
+            31, /*users | user profile | View profile detail*/
+            29, /*users | user profile | Can change user profile*/
+            30, /*users | user profile | Can delete user profile*/
+            50, /*docs | blob text | Can delete blob text*/
+            53, /*docs | permission | Can delete permission*/
+            51, /*docs | permission | Can add permission*/
+            56 /*docs | permalink | Can delete permalink*/
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u5B78\u8853\u7D44", /*學術組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u6A5F\u52D5\u7D44", /*機動組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u5EB6\u52D9\u7D44", /*庶務組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u968A\u8F14\u7D44", /*隊輔組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u6587\u5275\u7D44", /*文創組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u5834\u5730\u7D44", /*場地組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u7D00\u9304\u7D44", /*紀錄組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "\u6D3B\u52D5\u7D44", /*活動組*/
+        "permissions": [
+        ]
+    },
+    "model": "auth.group",
+    "pk": 1
+}
+]
